@@ -11,8 +11,8 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage ('Sonar Analisys') {
-            enviroment {
+        stage ('Sonar Analysis') {
+            environment {
                 scannerHome = tool 'SONAR_SCANNER'
             }
             steps {
