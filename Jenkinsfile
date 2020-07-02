@@ -51,14 +51,6 @@ pipeline {
                 }
             }
         }
-        stage ('Functional Test') {
-            steps {
-                dir('functional-test') {
-                    git credentialsId: 'github_login', url: 'https://github.com/giordanbetat/tasks-functional-tests.git'
-                    sh 'mvn test'
-                }
-            }
-        }
     }
 }
 
